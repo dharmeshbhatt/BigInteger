@@ -51,15 +51,28 @@ void BigInteger::add(BigInteger other) {
   vector<int> temp;
   int carry = 0;
   int temp_sum = 0;
-  for(it1 = v1.begin();it1 != v1.end(); it1++) {
-    for(it2 = v2.begin(); it2 != v2.end(); it2++) {
-      temp_sum = *it1 + multiplier*(*it2) + carry;
-      if(temp_sum > 9) 
-        carry = 1;
+  int a = 0, b = 0;
+  while(true) {
+    if(it1 == v1.end() && it2 == v2.end())
+      break;
+ 
+    if(it1 != v1.end()) 
+      a = *it1;
+    else
+      a = 0;
 
-      temp.push_back(temp_sum%10);
-    }
-  } 
+    if(it2 != v2.end())
+      b = *it2;
+    else
+      b = 0;
+    
+    temp_sum = a + b + carry;
+    if(temp_sum > 9)
+      carry = 1;
+
+    temp.push_back(temp_sum%10);
+ }   
+
 
   nodes = temp;
   sign = (sign == other.sign);
