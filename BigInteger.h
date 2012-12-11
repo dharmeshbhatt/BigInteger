@@ -9,7 +9,8 @@ class BigInteger {
     // constructor that takes string as input
     // converts to BigInteger
     BigInteger(string input);
-    void add(BigInteger other);
+    void add(BigInteger other)
+    // false means negative;
     bool sign;
   private:
     vector<int> nodes;
