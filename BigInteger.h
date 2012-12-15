@@ -10,9 +10,9 @@ class BigInteger {
     // converts to BigInteger
     BigInteger(string input);
     void add(BigInteger other)
+    static int max(BigInteger, BigInteger);
     // false means negative;
     bool sign;
-  private:
     vector<int> nodes;
 };
 
