@@ -46,6 +46,8 @@ void BigInteger::add(BigInteger other) {
   return;
 }
 
-
+void BigInteger::subtract(BigInteger other) {
+  
+}
 
 
