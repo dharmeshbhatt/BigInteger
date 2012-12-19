@@ -9,11 +9,14 @@ class BigInteger {
     // constructor that takes string as input
     // converts to BigInteger
     BigInteger(string input);
-    void add(BigInteger other)
+    BigInteger add(BigInteger other);
+    BigInteger subtract(BigInteger other);
+    // return 0 if first param is greater
+    // 1 otherwise
     static int max(BigInteger, BigInteger);
     // false means negative;
     bool sign;
-    vector<int> nodes;
+    vector <int> nodes;
 };
 
 #endif
